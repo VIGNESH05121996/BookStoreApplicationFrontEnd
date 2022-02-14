@@ -1,0 +1,106 @@
+<div class="Whole-Container" fxLayout="row" fxLayoutAlign="center center">
+    <div class="Left-container" > 
+        <div class="image-container">
+            <div fxLayout.xs="column">
+                <img class="Image" src="../assets/signup-login-image.png">
+            </div>
+            <span class="image_bottom-text">ONLINE BOOK SHOPPING</span>
+        </div>
+    </div>
+    <div class="Signup-Container" *ngIf="!loginSigupSwitch">
+        <div class="form-container">
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmittedSignUp()">
+                <div class="input-container" >
+                    <div fxLayout.xs="column" >
+                        <button class="Login-Signup-switch" (click)="loginSigupSwap()">LOGIN</button>
+                        <button class="Login-Signup-switch">SIGNUP</button>
+                    </div>
+                    <div>
+                        <div class="lable">
+                            <label for="Full Name">Full Name</label>
+                        </div>
+                        <div>
+                            <input class="input-text" type="text" id="Full Name" formControlName="fullName" required>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="lable">
+                            <label for="EmailId">EmailId</label>
+                        </div>
+                        <div>
+                            <input class="input-text" type="text" id="EmailId" formControlName="emailId">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="lable">
+                            <label for="Password">Password</label>
+                        </div>
+                        <div>
+                            <input class="input-text" type="text" id="Password" formControlName="password">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="lable">
+                            <label for="Mobile Number">Mobile Number</label>
+                        </div>
+                        <div>
+                            <input class="input-text" type="text" id="Mobile Number" formControlName="mobileNumber" >
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Signup">
+                            <button mat-stroked-button class="Signup-button">Signup</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="Signup-Container" *ngIf="loginSigupSwitch">
+        <div class="form-container">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmittedLogin()">
+                <div class="input-container" >
+                    <div fxLayout.xs="column" >
+                        <button class="Login-Signup-switch">LOGIN</button>
+                        <button class="Login-Signup-switch" (click)="loginSigupSwap()">SIGNUP</button>
+                    </div>
+                    <div>
+                        <div class="lable">
+                            <label for="EmailId">EmailId</label>
+                        </div>
+                        <div>
+                            <input class="input-text" type="text" id="EmailId" formControlName="emailId"> 
+                        </div>
+                    </div>
+                    <div>
+                        <div class="lable">
+                            <label for="Password">Password</label>
+                        </div>
+                        <div>
+                            <input class="input-text" type="text" id="Password" formControlName="password">
+                        </div>
+                        <div class="forgetPassword">
+                            <span>Forget Password?</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Login">
+                            <button class="Login-button">Login</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="OR">
+                            <h2><span>OR</span></h2>
+                        </div>
+                    </div>
+                    <div fxLayout.xs="column">
+                        <button  class="faceBookButton">Facebook</button>
+                        <div class="footer-button">
+                            <button class="googleButton">Google</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,150 @@
+.Image{
+    height: 230px; 
+    width: 230px; 
+    margin-left: 10%;
+    padding-top: 9%;
+    padding-bottom: 9%;
+}
+.Left-container{
+    padding-left: 20%;
+    padding-top: 150px;
+    padding-right: 23%;
+    padding-bottom: 150px;
+}
+.image-container{
+    box-shadow: 0 1px 7px rgb(126, 124, 124);
+    background-color: rgba(255, 255, 255, 0.801);
+    border-radius: 15px;
+    padding-bottom: 50px;
+    margin-top: -50px;
+    margin-left: -10%;
+    margin-right: -40%;
+}
+.image_bottom-text{
+    margin-left: 12%;
+    margin-bottom: 50%;
+    font-size: 20px;
+    font-weight: 500;
+}
+.Whole-Container{
+    background-color: rgb(150, 149, 149);
+}
+
+.name_input
+{
+  width: 48%;
+}
+
+.form-container{
+    height: 150px; 
+    width: 400px; 
+    margin-left: -80%;
+    padding-top: 50%;
+    padding-bottom: 20%;
+    box-shadow: 0 1px 7px rgb(126, 124, 124);
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top: 29.5%;
+}
+.lable{
+    padding-bottom: 2px;
+    padding-top: 15px;
+}
+.input-text{
+    width: 75%;
+    font-size: 10pt;
+    height: 17pt;
+}
+.Signup-Container{
+    padding-bottom: 11.3%;
+}
+.input-container{
+    margin-top: -45%;
+    margin-left: 18%;
+    
+}
+.Signup-button{
+    padding-top: 1%;
+    width: 78%;
+    padding-bottom: 1%;
+    font-size: 14pt;
+    background-color: rgba(165, 42, 42, 0.938);
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.Signup{
+    padding-top: 25px;
+}
+.Login-Signup-switch{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 3.5%;
+    padding-right: 13.25%;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 18pt;
+    font-weight: 550;
+}
+.forgetPassword{
+    opacity: 0.6;
+    margin-left: 43%;
+    cursor: pointer;
+}
+.Login-button{
+    padding-top: 2%;
+    width: 78%;
+    padding-bottom: 2%;
+    font-size: 11pt;
+    background-color: rgba(165, 42, 42, 0.938);
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 4%;
+}
+h2{
+    margin-top: 12%;
+    width: 60%;
+    text-align: center;
+    border-bottom: 2px solid rgb(153, 151, 151);
+    line-height: 0.1em;
+    margin-top: 10px 0 20px;
+    margin-left: 10%;
+}
+h2 span{
+    background-color: #fff;
+    padding: 0 15px;
+}
+.faceBookButton{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 3%;
+    padding-right: 6%;
+    border: none;
+    background-color: #3b5998 ;
+    cursor: pointer;
+    font-size: 14pt;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.918);
+    border-radius: 3px;
+    margin-top: 10%;
+    margin-left: 3%;
+}
+.googleButton{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 9%;
+    padding-right: 9.5%;
+    border: none;
+    background-color: rgb(185, 181, 181);
+    cursor: pointer;
+    font-size: 14pt;
+    font-weight: 300;
+    border-radius: 3px;
+    margin-left: 39%;
+    margin-bottom: 50%;
+}
+.footer-button{
+    margin-top: -10.8%;
+}
