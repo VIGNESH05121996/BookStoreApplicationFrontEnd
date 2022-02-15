@@ -2,18 +2,21 @@
     <div class="Left-container" > 
         <div class="image-container">
             <div fxLayout.xs="column">
-                <img class="Image" src="../assets/signup-login-image.png">
+                <img class="Image" src="../assets/account-image.png">
+                <div class="image_bottom-text">
+                    <p><span >ONLINE BOOK SHOPPING</span></p>
+                </div>
             </div>
-            <span class="image_bottom-text">ONLINE BOOK SHOPPING</span>
         </div>
     </div>
+   <div class="Right-container">
     <div class="Signup-Container" *ngIf="!loginSigupSwitch">
         <div class="form-container">
             <form [formGroup]="signupForm" (ngSubmit)="onSubmittedSignUp()">
-                <div class="input-container" >
+                <div class="signup-input-container" >
                     <div fxLayout.xs="column" >
-                        <button class="Login-Signup-switch" (click)="loginSigupSwap()">LOGIN</button>
-                        <button class="Login-Signup-switch">SIGNUP</button>
+                        <button class="Signup-switch" (click)="loginSigupSwap()">LOGIN</button>
+                        <button class="Signup-switch">SIGNUP</button>
                     </div>
                     <div>
                         <div class="lable">
@@ -56,13 +59,13 @@
             </form>
         </div>
     </div>
-    <div class="Signup-Container" *ngIf="loginSigupSwitch">
+    <div class="Login-Container" *ngIf="loginSigupSwitch">
         <div class="form-container">
             <form [formGroup]="loginForm" (ngSubmit)="onSubmittedLogin()">
-                <div class="input-container" >
+                <div class="login-input-container" >
                     <div fxLayout.xs="column" >
-                        <button class="Login-Signup-switch">LOGIN</button>
-                        <button class="Login-Signup-switch" (click)="loginSigupSwap()">SIGNUP</button>
+                        <button class="Login-switch">LOGIN</button>
+                        <button class="Login-switch" (click)="loginSigupSwap()">SIGNUP</button>
                     </div>
                     <div>
                         <div class="lable">
@@ -93,14 +96,13 @@
                             <h2><span>OR</span></h2>
                         </div>
                     </div>
-                    <div fxLayout.xs="column">
+                    <div fxLayout.xs="column" class="footerButton">
                         <button  class="faceBookButton">Facebook</button>
-                        <div class="footer-button">
-                            <button class="googleButton">Google</button>
-                        </div>
+                        <button class="googleButton">Google</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+   </div>
 </div>

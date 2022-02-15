@@ -10,11 +10,13 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import {MatButtonModule} from '@angular/material/button';
 import { AccountComponentComponent } from './Components/account-component/account-component.component';
+import { ForgetPasswordComponentComponent } from './Components/forget-password-component/forget-password-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AccountComponentComponent
+    AccountComponentComponent,
+    ForgetPasswordComponentComponent
   ],
   imports: [
     BrowserModule,
