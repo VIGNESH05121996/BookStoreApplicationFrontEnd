@@ -74,9 +74,18 @@
 				}
 				.forgetPassword{
 					opacity: 0.6;
-					margin-left: 210px;
+					margin-left: 200px;
 					margin-right: 65px;
+					.forgetPasswordButton{
+						width: 130px;
+						height: 20px;
+						font-size: 10pt;
+						background-color: #FFFFFF;
+						border: none;
+						cursor: pointer;
+					}
 				}
+				
 				.Login-button{
 					margin-top: 22px;
 					margin-left: 69px;
@@ -176,11 +185,6 @@
 					}
 				}
 			}
-			.forgetPassword{
-				opacity: 0.6;
-				margin-left: 210px;
-				margin-right: 65px;
-			}
 			.Signup-button{
 				margin-top: 22px;
 				margin-left: 69px;
@@ -203,15 +207,4 @@
 .Right-container{
 	position: absolute;
 	transform: translateX(50%);
-}
-@media only screen and (min-width:1280px) {
-	.image-container{
-		width: 200px;
-	}
-	.Login-Container{
-		width: 200px;
-	}
-	.Signup-Container{
-		width: 200px;
-	}
 }

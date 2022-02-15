@@ -30,4 +30,14 @@ export class UserServicesService {
     return this.httpService.postRequest('/User/login',data,false,header);
   }
 
+  forgetPassword(data:any)
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json'
+        
+      })
+    }
+    return this.httpService.postRequest('/User/forgetPassword',data,false,header);
+  }
 }

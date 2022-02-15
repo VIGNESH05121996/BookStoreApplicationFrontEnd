@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserServicesService } from 'src/app/Services/UserServices/user-services.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-account-component',
@@ -12,7 +13,7 @@ export class AccountComponentComponent implements OnInit {
   signupForm!:FormGroup;
   loginForm!:FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private userServices:UserServicesService) { }
+  constructor(private formBuilder: FormBuilder,private userServices:UserServicesService,private route:Router) { }
 
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
@@ -66,5 +67,9 @@ export class AccountComponentComponent implements OnInit {
     }
     else
     console.log("invalid");
+  }
+
+  navigateToForgetPassword(){
+    this.route.navigateByUrl('forgetPassword');
   }
 }
