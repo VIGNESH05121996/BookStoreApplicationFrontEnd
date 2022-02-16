@@ -40,4 +40,15 @@ export class UserServicesService {
     }
     return this.httpService.postRequest('/User/forgetPassword',data,false,header);
   }
+
+  resetPassword(data:any,token:any)
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization: 'Bearer '+ token
+      })
+    }
+    return this.httpService.putRequest('/User/resetPassword',data,true,header);
+  }
 }
