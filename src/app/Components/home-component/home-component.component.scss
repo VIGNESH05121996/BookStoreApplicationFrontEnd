@@ -1,0 +1,88 @@
+.Whole-container { 
+	.Top-Bar { 
+        width: 1536px;
+        height: 60px;
+        background-color: #A03037;
+        display: flex;
+        flex-direction: row;
+		.topBarImage { 
+            width: 31px;
+            height: 24px;
+            margin-left: 164px;
+            margin-top: 18.6px;
+            margin-bottom: 17.69;
+            margin-right: 4px;
+		}
+
+		.bookStore { 
+            margin-top: 18px;
+            margin-bottom: 17px;
+            left: 201px;
+            width: 91px;
+            height: 26px;
+            font: normal normal normal 20px/26px Roboto;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            text-transform: capitalize;
+            opacity: 1;
+            margin-right: 42px;
+		}
+
+        .searchIcon
+        {
+            width: 13px;
+            height: 13px;
+            margin-top: 20px;
+            margin-bottom: 13px;
+            transform: translateZ(10px);
+            transform: translateX(14px);
+            opacity: 0.5;
+        }
+
+		.searchBox { 
+            top: 14px;
+            left: 334px;
+            width: 490px;
+            height: 33px;
+            background-color: #FFFFFF;
+            border-radius: 3px;
+            opacity: 1;
+            border: none;
+            margin-top: 14px;
+            margin-bottom: 13px;
+		}
+        input{
+            padding-left: 30px;
+        }
+
+		.personIcon { 
+            margin-left: 247px;
+            margin-top: 10px;
+            color: #FFFFFF;
+		}
+
+		.Profile { 
+            width: 31px;
+            height: 13px;
+            margin-top: 36px;
+            margin-bottom: 6px;
+            margin-left: -30px;
+            color: #FFFFFF;
+		}
+
+		.cartIcon { 
+            margin-left: 100px;
+            margin-top: 10px;
+            color: #FFFFFF;
+		}
+
+		.cart { 
+            width: 31px;
+            height: 13px;
+            margin-top: 36px;
+            margin-bottom: 6px;
+            margin-left: -26px;
+            color: #FFFFFF;
+		}
+	}
+}

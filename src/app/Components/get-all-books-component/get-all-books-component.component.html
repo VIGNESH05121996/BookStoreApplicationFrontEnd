@@ -1,0 +1,29 @@
+<div class="Whole-Container">
+    <div class="bookHeader">
+        <span class="books">Books</span>
+        <span class="bookCount">({{countBooks}} items)</span>
+        <div class="priceSort">
+            <mat-form-field appearance="outline">
+                <mat-label>Sort by relevance</mat-label>
+                <mat-select >
+                    <mat-option (click)="lowTohigh()" value="1">Price:Low to High</mat-option>
+                    <mat-option (click)="highTolow()" value="2">Price:High to Low</mat-option>
+                    <mat-option (click)="newArrivals()" value="3">Newest Arrivals</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="display-book">
+        <div class="Books-container" *ngFor="let response of BookList">
+            <div class="bookCard">
+                <img src="../assets/BookImage.png">
+            </div>
+            <div class="bookName">{{response.bookName}}</div>
+            <div class="bookAuthor">{{response.bookAuthor}}</div>
+            <div class="totalRating">{{response.totalRating}}<mat-icon class="Star">star</mat-icon></div>
+            <div class="noOfPeopleRated"><span>({{response.noOfPeopleRated}})</span></div>
+            <div class="discountPricing">Rs.{{response.discountPrice}}</div>
+            <div class="originalPrice">Rs.{{response.originalPrice}}</div>
+        </div>
+    </div>
+</div>

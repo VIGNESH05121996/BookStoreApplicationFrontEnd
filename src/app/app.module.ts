@@ -12,19 +12,28 @@ import {MatButtonModule} from '@angular/material/button';
 import { AccountComponentComponent } from './Components/account-component/account-component.component';
 import { ForgetPasswordComponentComponent } from './Components/forget-password-component/forget-password-component.component';
 import { ResetPasswordComponentComponent } from './Components/reset-password-component/reset-password-component.component';
+import { HomeComponentComponent } from './Components/home-component/home-component.component';
+import {MatIconModule} from '@angular/material/icon';
+import { GetAllBooksComponentComponent } from './Components/get-all-books-component/get-all-books-component.component';
+import { FooterComponentComponent } from './Components/footer-component/footer-component.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccountComponentComponent,
     ForgetPasswordComponentComponent,
-    ResetPasswordComponentComponent
+    ResetPasswordComponentComponent,
+    HomeComponentComponent,
+    GetAllBooksComponentComponent,
+    FooterComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,HttpClientModule,
     BrowserAnimationsModule,
-    MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,FlexLayoutModule,MatButtonModule
+    MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,FlexLayoutModule,MatButtonModule,
+    MatIconModule,MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

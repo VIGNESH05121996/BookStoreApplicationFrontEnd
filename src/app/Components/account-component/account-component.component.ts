@@ -62,14 +62,14 @@ export class AccountComponentComponent implements OnInit {
       }
       this.userServices.login(requestData).subscribe((response:any)=>{
         console.log(response)
-        localStorage.setItem('token',response.jwtToken)
+        if(response.success == true)
+        {
+          localStorage.setItem('token',response.jwtToken)
+          this.route.navigateByUrl('home');
+        }
       })
     }
     else
     console.log("invalid");
-  }
-
-  navigateToForgetPassword(){
-    this.route.navigateByUrl('forgetPassword');
   }
 }

@@ -1,0 +1,131 @@
+.Whole-Container { 
+    width: 1536px;
+	.bookHeader { 
+        margin-left: 172px;
+        width: 130px;
+        margin-top: 50px;
+		.books { 
+            font-size: 25px;
+		}
+
+		.bookCount { 
+            opacity: 0.6;
+		}
+
+		mat-form-field { 
+            margin-left: 935px;
+            margin-right: 173px;
+            font-size: 13px;
+            width: 200px;
+            transform: translateY(-50px);
+			mat-label { 
+                height: 30px;
+			}
+
+			mat-select { 
+                width: 166px;
+                padding-left: 9px;
+                
+			}
+		}
+	}
+
+	.Books-container { 
+        top: 145px;
+        left: 171px;
+        width: 235px;
+        height: 275px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #E2E2E2;
+        border-radius: 3px;
+        opacity: 1;
+        margin-left: 172px;
+        margin-top: -40px;
+		.bookCard { 
+            background-color: #F5F5F5;
+			img { 
+                width: 105px;
+                height: 135px;
+                margin-left: 67px;
+                margin-right: 61px;
+                margin-top: 17px;
+                margin-bottom: 20px;
+			}
+		}
+
+		.bookName { 
+            width: 230px;
+            height: 19px;
+            margin-left: 20px;
+            margin-right: 85px;
+            margin-top: 2px;
+            font: normal normal normal 16px Roboto;
+		}
+
+		.bookAuthor { 
+            width: 80px;
+            height: 13px;
+            font: normal normal normal 12px Roboto;
+            opacity: 0.7;
+            margin-left: 20px;
+            margin-right: 152px;
+            margin-top: 4px;
+		}
+
+		.totalRating { 
+            top: 367px;
+            left: 191px;
+            width: 33px;
+            height: 16px;
+            background: #388E3C 0% 0% no-repeat padding-box;
+            border-radius: 1px;
+            opacity: 1;
+            margin-left: 20px;
+            margin-top: 5px;
+            font-size: 15px;
+            padding-left: 5px;
+            padding-bottom: 2px;
+            color: #FFFFFF;
+			.Star { 
+               font-size: 12px;
+               color: #FFFFFF;
+			}
+		}
+        .noOfPeopleRated{
+            font-size: 13px;
+            opacity: 0.7;
+            margin-left: 65px;
+            transform: translateY(-18.5px);
+        }
+
+		.discountPricing { 
+            margin-left: 20px;
+            margin-top: -10px;
+            top: 388px;
+            left: 191px;
+            width: 48px;
+            height: 16px;
+            font: normal normal bold 16px Roboto;
+            letter-spacing: 0px;
+            color: #0A0102;
+            opacity: 1;
+		}
+        .originalPrice { 
+            top: 390px;
+            left: 244px;
+            width: 36px;
+            height: 13px;
+            text-decoration: line-through;
+            font: normal normal normal 13px Roboto;
+            letter-spacing: 0px;
+            color: #878787;
+            opacity: 1;
+            margin-left: 85px;
+            transform: translateY(-14px);
+        }
+	}
+    .display-book{
+        display: grid;
+        grid-template-columns: 300px 300px 300px 300px;
+    }
+}
