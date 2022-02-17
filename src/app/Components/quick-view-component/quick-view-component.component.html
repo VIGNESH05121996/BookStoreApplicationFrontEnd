@@ -1,0 +1,26 @@
+<div class="Whole-container">
+    <div><button routerLink='/home/books' class="home">Home/</button><span class="book">
+        Book<span class="bookId">({{bookWithId?.bookId}})</span></span></div>
+    <div class="smallImage">
+        <img src="../assets/SmallImage1 (1).png" class="image1">
+        <img src="../assets/SmallImage2.png" class="image2">
+    </div>
+    <div class="bookContainer">
+        <img src="../assets/BookImage2.png">
+        <div fxLayout.xs="column" class="footerButton">
+            <button  class="addToBag">Add To Bag</button>
+            <button class="wishList">Wish List</button>
+        </div>
+        <div class="right-container">
+            <div class="bookName">{{bookWithId?.bookName}}</div>
+            <div class="bookAuthor">{{bookWithId?.bookAuthor}}</div>
+            <div class="totalRating">{{bookWithId?.totalRating}}<mat-icon class="Star">star</mat-icon></div>
+            <div class="noOfPeopleRated"><span>({{bookWithId?.noOfPeopleRated}})</span></div>
+            <div class="discountPricing">Rs.{{bookWithId?.discountPrice}}</div>
+            <div class="originalPrice">Rs.{{bookWithId?.originalPrice}}</div>
+            <hr style="width:700px;text-align:left;margin-left:0;margin-top: -3px;">
+            <div class="bookSpecs"><li>Book Details<p><span class="detailsOfBook">{{bookWithId?.bookDetails}}</span>
+               </p></li></div>
+        </div>
+    </div>
+</div>

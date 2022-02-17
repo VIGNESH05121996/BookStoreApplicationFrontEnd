@@ -14,9 +14,9 @@
         </div>
     </div>
     <div class="display-book">
-        <div class="Books-container" *ngFor="let response of BookList">
+        <div class="Books-container" *ngFor="let response of BookList" (click)="quickview(response)">
             <div class="bookCard">
-                <img src="../assets/BookImage.png">
+                <img src="../assets/BookImage.png" >
             </div>
             <div class="bookName">{{response.bookName}}</div>
             <div class="bookAuthor">{{response.bookAuthor}}</div>

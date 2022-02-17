@@ -5,6 +5,7 @@ import { ForgetPasswordComponentComponent } from './Components/forget-password-c
 import { ResetPasswordComponentComponent } from './Components/reset-password-component/reset-password-component.component';
 import { HomeComponentComponent } from './Components/home-component/home-component.component';
 import { GetAllBooksComponentComponent } from './Components/get-all-books-component/get-all-books-component.component';
+import { QuickViewComponentComponent } from './Components/quick-view-component/quick-view-component.component';
 
 const routes: Routes = [
   {path: '',   redirectTo: '/account', pathMatch: 'full'},
@@ -16,6 +17,7 @@ const routes: Routes = [
   children:[
       {path:'', redirectTo:"/home/books", pathMatch:'full' },
       {path:'books', component:GetAllBooksComponentComponent},
+      {path:'book/:bookId', component:QuickViewComponentComponent},
   ]}
 ];
 

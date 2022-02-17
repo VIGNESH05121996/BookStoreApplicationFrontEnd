@@ -1,5 +1,5 @@
 .Whole-Container { 
-    width: 1536px;
+    width: 1500px;
 	.bookHeader { 
         margin-left: 172px;
         width: 130px;
@@ -127,5 +127,10 @@
     .display-book{
         display: grid;
         grid-template-columns: 300px 300px 300px 300px;
+        grid-row-gap: 60px;
+    }
+    .Books-container:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        cursor: pointer;
     }
 }

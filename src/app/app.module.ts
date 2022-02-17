@@ -17,6 +17,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { GetAllBooksComponentComponent } from './Components/get-all-books-component/get-all-books-component.component';
 import { FooterComponentComponent } from './Components/footer-component/footer-component.component';
 import {MatSelectModule} from '@angular/material/select';
+import { QuickViewComponentComponent } from './Components/quick-view-component/quick-view-component.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatSelectModule} from '@angular/material/select';
     ResetPasswordComponentComponent,
     HomeComponentComponent,
     GetAllBooksComponentComponent,
-    FooterComponentComponent
+    FooterComponentComponent,
+    QuickViewComponentComponent
   ],
   imports: [
     BrowserModule,
