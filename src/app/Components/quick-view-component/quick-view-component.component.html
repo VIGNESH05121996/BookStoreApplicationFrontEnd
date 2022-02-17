@@ -9,18 +9,18 @@
         <img src="../assets/BookImage2.png">
         <div fxLayout.xs="column" class="footerButton">
             <button  class="addToBag">Add To Bag</button>
-            <button class="wishList">Wish List</button>
+            <button class="wishList" (click)="addWishlist()">Wish List</button>
         </div>
         <div class="right-container">
             <div class="bookName">{{bookWithId?.bookName}}</div>
-            <div class="bookAuthor">{{bookWithId?.bookAuthor}}</div>
+            <div class="bookAuthor">by {{bookWithId?.bookAuthor}}</div>
             <div class="totalRating">{{bookWithId?.totalRating}}<mat-icon class="Star">star</mat-icon></div>
             <div class="noOfPeopleRated"><span>({{bookWithId?.noOfPeopleRated}})</span></div>
             <div class="discountPricing">Rs.{{bookWithId?.discountPrice}}</div>
             <div class="originalPrice">Rs.{{bookWithId?.originalPrice}}</div>
             <hr style="width:700px;text-align:left;margin-left:0;margin-top: -3px;">
-            <div class="bookSpecs"><li>Book Details<p><span class="detailsOfBook">{{bookWithId?.bookDetails}}</span>
-               </p></li></div>
+            <div class="bookSpecs"><li>Book Details<p>{{bookWithId?.bookDetails}}</p></li></div>
+            <hr style="width:700px;text-align:left;margin-left:0;margin-top: -3px;">
         </div>
     </div>
 </div>

@@ -6,6 +6,8 @@ import { ResetPasswordComponentComponent } from './Components/reset-password-com
 import { HomeComponentComponent } from './Components/home-component/home-component.component';
 import { GetAllBooksComponentComponent } from './Components/get-all-books-component/get-all-books-component.component';
 import { QuickViewComponentComponent } from './Components/quick-view-component/quick-view-component.component';
+import { WishListComponentComponent } from './Components/wish-list-component/wish-list-component.component';
+
 
 const routes: Routes = [
   {path: '',   redirectTo: '/account', pathMatch: 'full'},
@@ -18,6 +20,7 @@ const routes: Routes = [
       {path:'', redirectTo:"/home/books", pathMatch:'full' },
       {path:'books', component:GetAllBooksComponentComponent},
       {path:'book/:bookId', component:QuickViewComponentComponent},
+      {path:'wishList', component:WishListComponentComponent},
   ]}
 ];
 

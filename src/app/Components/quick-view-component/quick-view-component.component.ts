@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookServiceService } from 'src/app/Services/BookServices/book-service.service';
+import { AddWishListService } from 'src/app/Services/WishListServices/add-wish-list.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quick-view-component',
@@ -10,7 +12,7 @@ export class QuickViewComponentComponent implements OnInit {
   token:any;
   bookId:any; 
   bookWithId:any;
-  constructor(private bookService:BookServiceService) { }
+  constructor(private bookService:BookServiceService,private wishListService:AddWishListService,private route:Router) { }
 
   ngOnInit(): void {
     this.token=localStorage.getItem('token');
@@ -20,11 +22,20 @@ export class QuickViewComponentComponent implements OnInit {
   getBookWithId() {
     this.bookService.getAllBooks(this.token).subscribe((response: any) => {
         response.book.forEach((element: any) => {
-          console.log(element)
           if (element.bookId == this.bookId) {
             this.bookWithId = element;
         }
       });
+    })
+  }
+
+  addWishlist(){
+    this.wishListService.addBookToWishList(this.bookId,this.token).subscribe((response:any)=>{
+      console.log(response)
+      if(response.success == true)
+      {
+        this.route.navigateByUrl('/home/wishList');
+      }
     })
   }
 }

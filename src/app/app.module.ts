@@ -18,6 +18,7 @@ import { GetAllBooksComponentComponent } from './Components/get-all-books-compon
 import { FooterComponentComponent } from './Components/footer-component/footer-component.component';
 import {MatSelectModule} from '@angular/material/select';
 import { QuickViewComponentComponent } from './Components/quick-view-component/quick-view-component.component';
+import { WishListComponentComponent } from './Components/wish-list-component/wish-list-component.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { QuickViewComponentComponent } from './Components/quick-view-component/q
     HomeComponentComponent,
     GetAllBooksComponentComponent,
     FooterComponentComponent,
-    QuickViewComponentComponent
+    QuickViewComponentComponent,
+    WishListComponentComponent
   ],
   imports: [
     BrowserModule,

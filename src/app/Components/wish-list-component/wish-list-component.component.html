@@ -1,0 +1,20 @@
+<div class="whole-container">
+    <div class="switchButton"><button routerLink='/home/books' class="home">Home/</button>
+        <span class="myWishList">My Wishlist</span>
+    </div>
+    <div class="myWishList1">
+        <div class="wishListText">
+            <p class="Mylist">My Wishlist({{countBooks}})</p>
+        </div>
+        <div class="wishList-container" *ngFor="let bookList of wishList">
+            <img src="../assets/BookImage2.png">
+            <div class="bookName">{{bookList.bookName}}</div>
+            <div class="bookAuthor">by {{bookList.bookAuthor}}</div>
+            <div class="discountPricing">Rs.{{bookList.discountPrice}}</div>
+            <div class="originalPrice">Rs.{{bookList.originalPrice}}</div>
+            <button mat-icon-button matTooltip="Permanently Delete" (click)="deleteWishList(bookList)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

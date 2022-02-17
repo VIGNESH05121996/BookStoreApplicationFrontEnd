@@ -58,6 +58,7 @@
 				width: 128px;
 				background-color: #A03037;
 				color: #FFFFFF;
+				cursor: pointer;
 			}
 
 			.wishList { 
@@ -67,6 +68,7 @@
 				color: #FFFFFF;
 				margin-left: 15px;
 				border: none;
+				cursor: pointer;
 			}
 		}
 
@@ -132,18 +134,19 @@
 			.bookSpecs{
 				opacity: 0.8;
 				margin-left: 20px;
-				margin-top: 20px;
+				margin-top: 15px;
 				li{
-					height: 120px;
-					font-size: 12pt;
+					height: 140px;
+					font-size: 11.5pt;
 					p{
-						margin-left: 4px;
-						font-size: 10pt;
+						margin-left: 26.5px;
+						font-size: 9.5pt;
 						height: 120px;
-						width: 682px;
+						width: 660px;
 						transform: translateX(-5px);
+						text-align: justify;
 						.detailsOfBook{
-							margin-left: 23px;
+							margin-left: 33px;
 						}
 					}
 				}
