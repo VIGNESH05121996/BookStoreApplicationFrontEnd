@@ -15,4 +15,57 @@
             <button class="PlaceOrderButton">Place Order</button>
         </div>
     </div>
+    <div class="address-container-closed" *ngIf="!addressCard" (click)="addressCardSwap()">
+        <div class="address-card-closed">
+            <p class="card-closed-text">Address Details</p>
+        </div>
+    </div>
+    <div class="address-container-opened" *ngIf="addressCard">
+        <div class="address-card-opened">
+            <p class="card-opened-text">Contact Details
+                <button>Add New Address</button>
+            </p>
+            
+        </div>
+        <div class="FullName">
+            <label>Full Name</label>
+            <div class="nameBox" *ngFor="let name of addressList">
+                <p class="nameBox-text">{{name.fullName}}</p>
+            </div>
+        </div>
+        <div class="FullAddress">
+            <label>Address</label>
+            <div class="addressBox" *ngFor="let address of addressList">
+                <p class="addressBox-text">{{address.fullAddress}}</p>
+            </div>
+        </div>
+        <div class="city-town">
+            <label>City/Town</label>
+            <div class="cityTownBox" *ngFor="let cityTown of addressList">
+                <p class="cityTownBox-text">{{cityTown.city}}</p>
+            </div>
+        </div>
+        <div class="state">
+            <label>State</label>
+            <div class="stateBox" *ngFor="let state of addressList">
+                <p class="stateBox-text">{{state.state}}</p>
+            </div>
+        </div>
+        <div class="addressType">
+            <label>Type</label>
+            <div class="footerRadioButton">
+                <mat-radio-group aria-label="Select an option" class="radioButtons">
+                    <mat-radio-button value="1" color="warn" class="homeRadioButton">Home</mat-radio-button>
+                    <mat-radio-button value="2" color="warn" class="wordRadioButton">Work</mat-radio-button>
+                    <mat-radio-button value="3"color="warn" class="othersRadioButton">Others</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <button class="ContinueButton" (click)="addressCardSwap()">Continue</button>
+    </div>
+    <div class="order-summary-container">
+        <div class="summary-card-closed">
+            <p class="symmary-closed-text">Order Summary</p>
+        </div>
+    </div>
 </div>

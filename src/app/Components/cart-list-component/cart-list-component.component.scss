@@ -1,6 +1,7 @@
 .whole-container { 
     width: 1536px;
     height: 645px;
+    overflow-x: hidden;
 	.switchButton { 
         margin-left: 213px;
         margin-top: 15px;
@@ -35,7 +36,7 @@
                 width: 131px;
                 height: 35px;
                 letter-spacing: 0px;
-                font-weight: 600;
+                font-weight: 550;
                 font-size: 18px;  
                 margin-top: 17px;
                 margin-bottom: 14px;
@@ -102,4 +103,243 @@
         overflow-y : scroll;
         overflow-x: hidden;
       }
+    
+    .address-container-closed { 
+        margin-left: 220px;
+        margin-right: 167px;
+        margin-top: 30px;
+        border: 1px solid #E4E4E4;
+        width: 800px;
+        cursor: pointer;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        .address-card-closed{
+            width: 800px;
+            height: 60px;
+            border: 1px solid #E4E4E4;
+            border-radius: 1px;
+            .card-closed-text
+             { 
+                width: 131px;
+                height: 35px;
+                letter-spacing: 0px;
+                font-weight: 550;
+                font-size: 17px;  
+                margin-top: 17px;
+                margin-bottom: 14px;
+                margin-left: 40px;
+                opacity: 0.7;
+            }
+            .address-card-opened{
+                height: 250px;
+            }
+        }
+    
+    }
+    .address-container-closed { 
+        margin-left: 220px;
+        margin-right: 167px;
+        margin-top: 30px;
+        border: 1px solid #E4E4E4;
+        width: 800px;
+        cursor: pointer;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        .address-card-closed{
+            width: 800px;
+            height: 60px;
+            border: 1px solid #E4E4E4;
+            border-radius: 1px;
+            .card-closed-text
+             { 
+                width: 131px;
+                height: 35px;
+                letter-spacing: 0px;
+                font-weight: 550;
+                font-size: 17px;  
+                margin-top: 17px;
+                margin-bottom: 14px;
+                margin-left: 40px;
+                opacity: 0.7;
+            }
+        }
+    }
+    .address-container-opened { 
+        margin-left: 220px;
+        margin-right: 167px;
+        margin-top: 30px;
+        border: 1px solid #E4E4E4;
+        width: 800px;
+        height: 540px;
+        .address-card-opened{
+            margin-left: 36px;
+            margin-top: 25px;
+            .card-opened-text{
+               width: 730px;
+               height: 35px;
+               text-align: left;
+               font-size: 22px;
+               letter-spacing: 0px;
+               color: #333232;
+               opacity: 1;
+               font-weight: 500;
+               button{
+                   margin-left: 570px;
+                   width: 151px;
+                   height: 40px;
+                   border-color: #A03037;
+                   color: #A03037;
+                   background-color: #FFFFFF;
+                   border-radius: 2px;
+                   opacity: 1;
+                   cursor: pointer;
+                   transform: translateY(-25px);
+                }
+            }
+        }
+        .FullName{
+            margin-left: 57px;
+            margin-top: 38px;
+            label{
+                width: 54px;
+                height: 16px;
+                font-size: 14px;
+            }
+            .nameBox{
+                border: 1px solid #E4E4E4;
+                width: 251px;
+                height: 45px;
+                margin-top: 9px;
+                .nameBox-text{
+                    margin-left: 15px;
+                    margin-top: 13px;
+                    margin-bottom: 15px;
+                    width: 79px;
+                    height: 15px;
+                }
+            }
+        }
+        .FullAddress{
+            margin-left: 57px;
+            margin-top: 15px;
+            label{
+                width: 54px;
+                height: 16px;
+                font-size: 14px;
+            }
+            .addressBox{
+                border: 1px solid #E4E4E4;
+                width: 512px;
+                height: 82px;
+                margin-top: 9px;
+                .addressBox-text{
+                    margin-left: 15px;
+                    margin-top: 13px;
+                    margin-bottom: 15px;
+                    width: 680px;
+                    height: 480px;
+                }
+            }
+        }
+        .city-town{
+            margin-left: 57px;
+            margin-top: 15px;
+            label{
+                width: 54px;
+                height: 16px;
+                font-size: 14px;
+            }
+            .cityTownBox{
+                border: 1px solid #E4E4E4;
+                width: 251px;
+                height: 45px;
+                margin-top: 9px;
+                .cityTownBox-text{
+                    margin-left: 15px;
+                    margin-top: 13px;
+                    margin-bottom: 15px;
+                    width: 79px;
+                    height: 15px;
+                }
+            }
+        }
+        .state{
+            margin-left: 317px;
+            margin-top: 15px;
+            transform: translateY(-91.5px);
+            label{
+                width: 54px;
+                height: 16px;
+                font-size: 14px;
+            }
+            .stateBox{
+                border: 1px solid #E4E4E4;
+                width: 251px;
+                height: 45px;
+                margin-top: 9px;
+                .stateBox-text{
+                    margin-left: 15px;
+                    margin-top: 13px;
+                    margin-bottom: 15px;
+                    width: 79px;
+                    height: 15px;
+                }
+            }
+        }
+        .addressType { 
+            margin-left: 57px;
+            margin-top: 15px;
+            margin-top: -80px;
+            .footerRadioButton { 
+                margin-top: 9px;
+                
+                .radioButtons { 
+                    .wordRadioButton { 
+                        margin-left: 156px;
+                    }
+        
+                    .othersRadioButton { 
+                        margin-left: 156px;
+                    }
+                }
+            }
+        }
+        .ContinueButton{
+            margin-top: 30px;
+            margin-left: 600px;
+            width: 151px;
+            height: 35px;
+            background: #3371B5 0% 0% no-repeat padding-box;
+            border-radius: 2px;
+            opacity: 1;
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    .order-summary-container { 
+        margin-left: 220px;
+        margin-right: 167px;
+        margin-top: 30px;
+        border: 1px solid #E4E4E4;
+        width: 800px;
+        cursor: pointer;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        .summary-card-closed{
+            width: 800px;
+            height: 60px;
+            border: 1px solid #E4E4E4;
+            border-radius: 1px;
+            .symmary-closed-text
+             { 
+                width: 131px;
+                height: 35px;
+                letter-spacing: 0px;
+                font-weight: 550;
+                font-size: 17px;  
+                margin-top: 17px;
+                margin-bottom: 14px;
+                margin-left: 40px;
+                opacity: 0.7;
+            }
+        }
+    }
 }
