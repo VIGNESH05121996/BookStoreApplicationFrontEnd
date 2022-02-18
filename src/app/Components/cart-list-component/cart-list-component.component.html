@@ -1,0 +1,18 @@
+<div class="whole-container">
+    <div class="switchButton"><button routerLink='/home/books' class="home">Home/</button>
+        <span class="myCartList">My cart</span>
+    </div>
+    <div class="myCartList1">
+        <div class="cartText">
+            <p class="Mylist">My Cart({{countBooks}})</p>
+        </div>
+        <div class="cartList-container" *ngFor="let bookList of cartList">
+            <img src="../assets/BookImage2.png">
+            <div class="bookName">{{bookList.bookName}}</div>
+            <div class="bookAuthor">by {{bookList.bookAuthor}}</div>
+            <div class="discountPricing">Rs.{{bookList.discountPrice}}</div>
+            <div class="originalPrice">Rs.{{bookList.originalPrice}}</div>
+            <button class="PlaceOrderButton">Place Order</button>
+        </div>
+    </div>
+</div>

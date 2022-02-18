@@ -19,6 +19,7 @@ import { FooterComponentComponent } from './Components/footer-component/footer-c
 import {MatSelectModule} from '@angular/material/select';
 import { QuickViewComponentComponent } from './Components/quick-view-component/quick-view-component.component';
 import { WishListComponentComponent } from './Components/wish-list-component/wish-list-component.component';
+import { CartListComponentComponent } from './Components/cart-list-component/cart-list-component.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { WishListComponentComponent } from './Components/wish-list-component/wis
     GetAllBooksComponentComponent,
     FooterComponentComponent,
     QuickViewComponentComponent,
-    WishListComponentComponent
+    WishListComponentComponent,
+    CartListComponentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookServiceService } from 'src/app/Services/BookServices/book-service.service';
 import { AddWishListService } from 'src/app/Services/WishListServices/add-wish-list.service';
+import { CartListServiceService } from 'src/app/Services/CartListServices/cart-list-service.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,7 +13,8 @@ export class QuickViewComponentComponent implements OnInit {
   token:any;
   bookId:any; 
   bookWithId:any;
-  constructor(private bookService:BookServiceService,private wishListService:AddWishListService,private route:Router) { }
+  constructor(private bookService:BookServiceService,private wishListService:AddWishListService,private route:Router,
+       private cartListService:CartListServiceService) { }
 
   ngOnInit(): void {
     this.token=localStorage.getItem('token');
@@ -35,6 +37,16 @@ export class QuickViewComponentComponent implements OnInit {
       if(response.success == true)
       {
         this.route.navigateByUrl('/home/wishList');
+      }
+    })
+  }
+
+  addCart(){
+    this.cartListService.addBookToCart(this.bookId,this.token).subscribe((response:any)=>{
+      console.log(response)
+      if(response.success == true)
+      {
+        this.route.navigateByUrl('/home/cart');
       }
     })
   }
