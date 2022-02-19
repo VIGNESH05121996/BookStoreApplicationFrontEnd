@@ -198,6 +198,8 @@
         .FullName{
             margin-left: 57px;
             margin-top: 38px;
+            width: 743px;
+            height:76px;
             label{
                 width: 54px;
                 height: 16px;
@@ -220,6 +222,8 @@
         .FullAddress{
             margin-left: 57px;
             margin-top: 15px;
+            width: 743px;
+            height:113px;
             label{
                 width: 54px;
                 height: 16px;
@@ -242,6 +246,8 @@
         .city-town{
             margin-left: 57px;
             margin-top: 15px;
+            width: 743px;
+            height:76px;
             label{
                 width: 54px;
                 height: 16px;
@@ -264,7 +270,8 @@
         .state{
             margin-left: 317px;
             margin-top: 15px;
-            transform: translateY(-91.5px);
+            height:76px;
+            transform: translateY(-90.5px);
             label{
                 width: 54px;
                 height: 16px;

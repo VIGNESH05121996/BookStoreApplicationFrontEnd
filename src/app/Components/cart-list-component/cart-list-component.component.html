@@ -29,8 +29,8 @@
         </div>
         <div class="FullName">
             <label>Full Name</label>
-            <div class="nameBox" *ngFor="let name of addressList">
-                <p class="nameBox-text">{{name.fullName}}</p>
+            <div class="nameBox" *ngFor="let name of addressList" >
+                <p class="nameBox-text" >{{name.fullName}}</p>
             </div>
         </div>
         <div class="FullAddress">
@@ -52,10 +52,10 @@
             </div>
         </div>
         <div class="addressType">
-            <label>Type</label>
+            <label>Select Button For Saved Address</label>
             <div class="footerRadioButton">
-                <mat-radio-group aria-label="Select an option" class="radioButtons">
-                    <mat-radio-button value="1" color="warn" class="homeRadioButton">Home</mat-radio-button>
+                <mat-radio-group aria-label="Select an option" class="radioButtons" (change)="getAddressWithType($event)"  >
+                    <mat-radio-button value="1"  color="warn" class="homeRadioButton" #home>Home</mat-radio-button>
                     <mat-radio-button value="2" color="warn" class="wordRadioButton">Work</mat-radio-button>
                     <mat-radio-button value="3"color="warn" class="othersRadioButton">Others</mat-radio-button>
                 </mat-radio-group>

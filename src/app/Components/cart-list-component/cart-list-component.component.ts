@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, ViewChild,EventEmitter } from '@angular/core';
 import { CartListServiceService } from 'src/app/Services/CartListServices/cart-list-service.service';
 import { AddressServicesService } from 'src/app/Services/AddressServices/address-services.service';
+import { MatRadioButton, MatRadioChange } from '@angular/material/radio';
 
 @Component({
   selector: 'app-cart-list-component',
@@ -8,18 +9,22 @@ import { AddressServicesService } from 'src/app/Services/AddressServices/address
   styleUrls: ['./cart-list-component.component.scss']
 })
 export class CartListComponentComponent implements OnInit {
+  @Output() change!:EventEmitter<MatRadioChange>;
   token:any;
   cartList:any;
   countBooks:any;
-  addressCard: boolean = false;
+  addressCard: boolean = false; 
   addressList:any;
+  defaultCheckedValue:any;
+  rbButtonClick:boolean=false;
+
   constructor(private cartListService:CartListServiceService,private addressServices:AddressServicesService) { }
 
   ngOnInit(): void {
     this.token=localStorage.getItem('token');
     this.getAllCart();
-    this.getAllAddress();
   }
+
   getAllCart() { 
     this.cartListService.getAllCartList(this.token).subscribe((response:any)=>{
       console.log(response)
@@ -33,11 +38,20 @@ export class CartListComponentComponent implements OnInit {
       console.log(this.addressCard);
       return this.addressCard === true ? (this.addressCard = false) : (this.addressCard = true);
   }
+
+  rbButtonCardSwap() {
+    console.log(this.rbButtonClick);
+    return this.rbButtonClick === true ? (this.rbButtonClick = false) : (this.rbButtonClick = true);
+}
   
-  getAllAddress() { 
+  getAddressWithType( mrChange: MatRadioChange){ 
       this.addressServices.getAllAddress(this.token).subscribe((response:any)=>{
-        console.log(response)
-        this.addressList=response.address
+        this.addressList=response.address.filter((result:any)=>{
+          return result.typeId == mrChange.value
+         
+        })
+        console.log(this.addressList)
     })
+    
   } 
 }
