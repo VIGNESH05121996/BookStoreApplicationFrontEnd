@@ -45,6 +45,8 @@
 		}
 
 		.cartList-container { 
+            width: 800px;
+            height:125px;
 			img { 
                 width: 65px;
                 height: 85px;
@@ -85,9 +87,11 @@
                 transform: translateY(-18px);
 			}
 
-			.PlaceOrderButton { 
-                transform: translateY(-40px);
+            .PlaceOrderButton { 
                 margin-left: 600px;
+                cursor: pointer;
+                transform: translateY(-40px);
+                text-align: center;
                 width: 151px;
                 height: 35px;
                 background: #3371B5 0% 0% no-repeat padding-box;
@@ -95,8 +99,37 @@
                 opacity: 1;
                 color: #FFFFFF;
                 border: none;
-                cursor: pointer;
-			}
+                
+            }
+            .incrementDecrementButtons { 
+                transform: translateX(360px);
+                margin-top: -70px;
+                .decrementButton { 
+                    border-radius: 50%;
+                    width: 24px;
+                    height: 24px;
+                    border: none;
+                    cursor: pointer;
+                }
+                .incrementButton{
+                    border-radius: 50%;
+                    width: 24px;
+                    height: 24px;
+                    border: none;
+                    transform: translateY(-62px);
+                    margin-left: 74px;
+                    cursor: pointer;
+                }
+            
+                .quantity { 
+                    width: 40px;
+                    height: 24px;
+                    text-align: center;
+                    border: 1px solid #E4E4E4;
+                    transform: translateY(-25px);
+                    margin-left: 27px;
+                }
+            }
 		}
 	}
     .myCartList1{ 
@@ -168,7 +201,7 @@
         margin-top: 30px;
         border: 1px solid #E4E4E4;
         width: 800px;
-        height: 540px;
+        height: 520px;
         .address-card-opened{
             margin-left: 36px;
             margin-top: 25px;
@@ -195,123 +228,142 @@
                 }
             }
         }
-        .FullName{
+        .addressDetailsContainer { 
             margin-left: 57px;
             margin-top: 38px;
-            width: 743px;
-            height:76px;
-            label{
-                width: 54px;
-                height: 16px;
-                font-size: 14px;
-            }
-            .nameBox{
-                border: 1px solid #E4E4E4;
-                width: 251px;
-                height: 45px;
-                margin-top: 9px;
-                .nameBox-text{
-                    margin-left: 15px;
-                    margin-top: 13px;
-                    margin-bottom: 15px;
-                    width: 79px;
-                    height: 15px;
+            width: 700px;
+            .FullName { 
+                width: 700px;
+                height:76px;
+                .fullNameLable { 
+                    width: 54px;
+                    height: 16px;
+                    font-size: 14px;
+                }
+        
+                .interFullName { 
+                    border: 1px solid #E4E4E4;
+                    width: 350px;
+                    height: 43px;
+                    margin-top: 3px;
+                      p{
+                        margin-left: 15px;
+                        margin-top: 13px;
+                        margin-bottom: 15px;
+                        width: 79px;
+                        height: 15px;
+                      }
                 }
             }
-        }
-        .FullAddress{
-            margin-left: 57px;
-            margin-top: 15px;
-            width: 743px;
-            height:113px;
-            label{
-                width: 54px;
-                height: 16px;
-                font-size: 14px;
-            }
-            .addressBox{
-                border: 1px solid #E4E4E4;
-                width: 512px;
-                height: 82px;
+        
+            .FullAdddress { 
+                width: 700px;
+                height:110px;
                 margin-top: 9px;
-                .addressBox-text{
-                    margin-left: 15px;
-                    margin-top: 13px;
-                    margin-bottom: 15px;
-                    width: 680px;
-                    height: 480px;
+                .fullAddressLable { 
+                    width: 54px;
+                    height: 16px;
+                    font-size: 14px;
+                }
+        
+                .interFullAddress { 
+                    border: 1px solid #E4E4E4;
+                    width: 512px;
+                    height: 82px;
+                    margin-top: 4px;
+                    p{
+                        margin-left: 15px;
+                        margin-top: 13px;
+                        margin-bottom: 15px;
+                        width: 500px;
+                        height: 65px;
+                      }
                 }
             }
-        }
-        .city-town{
-            margin-left: 57px;
-            margin-top: 15px;
-            width: 743px;
-            height:76px;
-            label{
-                width: 54px;
-                height: 16px;
-                font-size: 14px;
-            }
-            .cityTownBox{
-                border: 1px solid #E4E4E4;
-                width: 251px;
-                height: 45px;
+        
+            .cityTown { 
+                width: 700px;
+                height:76px;
                 margin-top: 9px;
-                .cityTownBox-text{
-                    margin-left: 15px;
-                    margin-top: 13px;
-                    margin-bottom: 15px;
-                    width: 79px;
-                    height: 15px;
+                .cityLable { 
+                    width: 54px;
+                    height: 16px;
+                    font-size: 14px;
+                }
+        
+                .interCity { 
+                    border: 1px solid #E4E4E4;
+                    width: 345px;
+                    height: 43px;
+                    margin-top: 3px;
+                      p{
+                        margin-left: 15px;
+                        margin-top: 13px;
+                        margin-bottom: 15px;
+                        width: 79px;
+                        height: 15px;
+                      }
+        
                 }
             }
-        }
-        .state{
-            margin-left: 317px;
-            margin-top: 15px;
-            height:76px;
-            transform: translateY(-90.5px);
-            label{
-                width: 54px;
-                height: 16px;
-                font-size: 14px;
-            }
-            .stateBox{
-                border: 1px solid #E4E4E4;
-                width: 251px;
-                height: 45px;
-                margin-top: 9px;
-                .stateBox-text{
-                    margin-left: 15px;
-                    margin-top: 13px;
-                    margin-bottom: 15px;
-                    width: 79px;
-                    height: 15px;
+        
+            .state { 
+                width: 393px;
+                height:76px;
+                transform: translateY(-75px);
+                margin-left: 355px;
+                
+                .stateLable { 
+                    width: 54px;
+                    height: 16px;
+                    font-size: 14px;
+                }
+        
+                .interState { 
+                    border: 1px solid #E4E4E4;
+                    width: 345px;
+                    height: 43px;
+                    margin-top: 3px;
+                    p{
+                        margin-left: 15px;
+                        margin-top: 13px;
+                        margin-bottom: 15px;
+                        width: 79px;
+                        height: 15px;
+                      }
                 }
             }
         }
         .addressType { 
+            width: 700px;
+            height:76px;
+            margin-top: 9px;
             margin-left: 57px;
-            margin-top: 15px;
-            margin-top: -80px;
+            margin-top: -120px;
+            transform: translateY(9px);
+            label { 
+                width: 100px;
+                height: 16px;
+                font-size: 14px;
+            }
+    
             .footerRadioButton { 
-                margin-top: 9px;
-                
+                margin-top: 5px;
                 .radioButtons { 
-                    .wordRadioButton { 
+                    .workRadioButton { 
                         margin-left: 156px;
                     }
-        
+    
                     .othersRadioButton { 
                         margin-left: 156px;
                     }
                 }
             }
         }
-        .ContinueButton{
-            margin-top: 30px;
-            margin-left: 600px;
+    
+        .ContinueButton { 
+            margin-top: 12px;
+            margin-left: 550px;
             width: 151px;
             height: 35px;
             background: #3371B5 0% 0% no-repeat padding-box;

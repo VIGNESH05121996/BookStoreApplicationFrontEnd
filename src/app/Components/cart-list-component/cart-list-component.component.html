@@ -12,7 +12,12 @@
             <div class="bookAuthor">by {{bookList.bookAuthor}}</div>
             <div class="discountPricing">Rs.{{bookList.discountPrice}}</div>
             <div class="originalPrice">Rs.{{bookList.originalPrice}}</div>
-            <button class="PlaceOrderButton">Place Order</button>
+            <button class="PlaceOrderButton" (click)="placeOrder(bookList)">Place Order</button>
+            <div class="incrementDecrementButtons">
+                <button class="decrementButton" (click)="decrement(bookList)">-</button>
+                <p class="quantity"><span >{{quantity}}</span></p>
+                <button class="incrementButton" (click)="increment(bookList)">+</button>
+            </div>
         </div>
     </div>
     <div class="address-container-closed" *ngIf="!addressCard" (click)="addressCardSwap()">
@@ -25,43 +30,32 @@
             <p class="card-opened-text">Contact Details
                 <button>Add New Address</button>
             </p>
-            
         </div>
-        <div class="FullName">
-            <label>Full Name</label>
-            <div class="nameBox" *ngFor="let name of addressList" >
-                <p class="nameBox-text" >{{name.fullName}}</p>
+        <div class="addressDetailsContainer" *ngFor="let address of addressList">
+            <div class="FullName"><label class="fullNameLable">Full Name</label>
+                <div class="interFullName"><p>{{address.fullName}}</p></div>
             </div>
-        </div>
-        <div class="FullAddress">
-            <label>Address</label>
-            <div class="addressBox" *ngFor="let address of addressList">
-                <p class="addressBox-text">{{address.fullAddress}}</p>
+            <div class="FullAdddress"><label class="fullAddressLable">Full Address</label>
+                <div class="interFullAddress"><p>{{address.fullAddress}}</p></div>
             </div>
-        </div>
-        <div class="city-town">
-            <label>City/Town</label>
-            <div class="cityTownBox" *ngFor="let cityTown of addressList">
-                <p class="cityTownBox-text">{{cityTown.city}}</p>
+            <div class="cityTown"><label class="cityLable">City/Town</label>
+                <div class="interCity"><p>{{address.city}}</p></div>
             </div>
-        </div>
-        <div class="state">
-            <label>State</label>
-            <div class="stateBox" *ngFor="let state of addressList">
-                <p class="stateBox-text">{{state.state}}</p>
+            <div class="state"><label class="stateLable">State</label>
+                <div class="interState"><p>{{address.state}}</p></div>
             </div>
+            <button class="ContinueButton" (click)="storeAddressIdToLocalStorage(address)">Continue</button>
         </div>
         <div class="addressType">
             <label>Select Button For Saved Address</label>
             <div class="footerRadioButton">
-                <mat-radio-group aria-label="Select an option" class="radioButtons" (change)="getAddressWithType($event)"  >
-                    <mat-radio-button value="1"  color="warn" class="homeRadioButton" #home>Home</mat-radio-button>
-                    <mat-radio-button value="2" color="warn" class="wordRadioButton">Work</mat-radio-button>
+                <mat-radio-group aria-label="Select an option" class="radioButtons"   >
+                    <mat-radio-button value="1" checked  color="warn" class="homeRadioButton">Home</mat-radio-button>
+                    <mat-radio-button value="2" color="warn" class="workRadioButton">Work</mat-radio-button>
                     <mat-radio-button value="3"color="warn" class="othersRadioButton">Others</mat-radio-button>
                 </mat-radio-group>
             </div>
         </div>
-        <button class="ContinueButton" (click)="addressCardSwap()">Continue</button>
     </div>
     <div class="order-summary-container">
         <div class="summary-card-closed">

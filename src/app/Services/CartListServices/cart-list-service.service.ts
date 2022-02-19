@@ -32,4 +32,14 @@ export class CartListServiceService {
     return this.httpService.getRequest('/Cart',true,header);
   }
 
+  updateCart(cartId:any,data:any,token:any)
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization: 'Bearer '+ token
+      })
+    }
+    return this.httpService.putRequest('/Cart/'+cartId,data,true,header);
+  }
 }
