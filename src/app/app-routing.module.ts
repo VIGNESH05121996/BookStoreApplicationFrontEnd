@@ -8,6 +8,7 @@ import { GetAllBooksComponentComponent } from './Components/get-all-books-compon
 import { QuickViewComponentComponent } from './Components/quick-view-component/quick-view-component.component';
 import { WishListComponentComponent } from './Components/wish-list-component/wish-list-component.component';
 import { CartListComponentComponent } from './Components/cart-list-component/cart-list-component.component';
+import { OrderSuccessComponentComponent } from './Components/order-success-component/order-success-component.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
       {path:'book/:bookId', component:QuickViewComponentComponent},
       {path:'wishList', component:WishListComponentComponent},
       {path:'cart', component:CartListComponentComponent},
+      {path:'successOrder', component:OrderSuccessComponentComponent},
   ]}
 ];
 

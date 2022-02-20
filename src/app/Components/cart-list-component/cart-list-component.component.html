@@ -57,9 +57,22 @@
             </div>
         </div>
     </div>
-    <div class="order-summary-container">
+    <div class="order-summary-container" *ngIf="!orderCard" (click)="orderCardSwap()">
         <div class="summary-card-closed">
             <p class="symmary-closed-text">Order Summary</p>
+        </div>
+    </div>
+    <div class="orderListOpened" *ngIf="orderCard">
+        <div class="orderSummaryText">
+            <p class="OrderSummarList">Order Summary</p>
+        </div>
+        <div class="orderist-container" *ngFor="let orderBookList of orderList">
+            <img src="../assets/BookImage2.png">
+            <div class="bookName">{{orderBookList.bookName}}</div>
+            <div class="bookAuthor">by {{orderBookList.bookAuthor}}</div>
+            <div class="discountPricing">Rs.{{orderBookList.discountPrice}}</div>
+            <div class="originalPrice">Rs.{{orderBookList.originalPrice}}</div>
+            <button class="CheckoutButton" (click)="orderCheckout(orderBookList)">Checkout</button>
         </div>
     </div>
 </div>

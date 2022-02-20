@@ -1,0 +1,99 @@
+.Whole-Container{
+    width: 1536px;
+    height: 660px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    .middleContainer{
+        width: 1000px;
+        height: 660px;  
+        margin-left: 280px;
+        margin-right: 167px;
+        img{
+            width: 500px;
+            height: 300px;
+            margin-left: 190px;
+        }
+        .hurrayMessage{
+            width: 352px;
+            height: 66px;
+            margin-left: 270px;
+            p{
+                text-align: center;
+                font: normal normal normal 20px Lato;
+                letter-spacing: 0px;
+                color: #333232;
+                opacity: 1;
+                font-weight: 530;
+            }
+        }
+        .table{
+            width: 751px;
+            height: 112px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #DCDCDC;
+            opacity: 1;
+            margin-top: 50px;
+            margin-left: 75px;
+            .firstRow{
+                width: 751px;
+                height: 35px;
+                background: #FAFAFA 0% 0% no-repeat padding-box;
+                border: 1px solid #DCDCDC;
+                opacity: 1;
+                padding-top: 10px;
+                .email{
+                    margin-right: 170px;
+                    margin-left: 80px;
+                }
+                .address{
+                    margin-left: 183px;
+                }
+            }
+            .secondRow{
+                .emailId-container{
+                    width: 223px;
+                    height: 65px;
+                    border: 1px solid #DCDCDC;
+                    transform: translateY(-1px);
+                    .emailId{
+                        margin-top: 20px;
+                        margin-left: 30px;
+                    }
+                }
+                .contactContainer{
+                    width: 223px;
+                    height: 65px;
+                    border: 1px solid #dcdcdcb4;
+                    transform: translateY(-68px);
+                    margin-left: 225px;
+                    .contactNumber{
+                        margin-top: 20px;
+                        margin-left: 60px;
+                    }
+                }
+                .addressContainer{
+                    width: 299px;
+                    height: 65px;
+                    border: 1px solid #DCDCDC;
+                    transform: translateY(-135px);
+                    margin-left: 450px;
+                }
+                
+            }
+        }
+        .continueShopping{
+            margin-top: 20px;
+            margin-left: 350px;
+            cursor: pointer;
+            text-align: center;
+            width: 170px;
+            height: 50px;
+            background: #3371B5 0% 0% no-repeat padding-box;
+            border-radius: 2px;
+            opacity: 1;
+            color: #FFFFFF;
+            border: none;
+            font-size: 12pt;
+        }
+    }
+}

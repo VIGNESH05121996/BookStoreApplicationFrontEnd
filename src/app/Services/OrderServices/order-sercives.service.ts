@@ -20,4 +20,15 @@ placeOrder(bookId:any,data:any,token:any)
   }
   return this.httpService.postRequest('/Order/'+bookId,data,true,header);
 }
+
+getAllOrderList(token:any)
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization: 'Bearer '+ token
+      })
+    }
+    return this.httpService.getRequest('/Order',true,header);
+  }
 }

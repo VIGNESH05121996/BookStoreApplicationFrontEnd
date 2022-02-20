@@ -3,6 +3,8 @@ import { CartListServiceService } from 'src/app/Services/CartListServices/cart-l
 import { AddressServicesService } from 'src/app/Services/AddressServices/address-services.service';
 import { MatRadioButton, MatRadioChange } from '@angular/material/radio';
 import { OrderSercivesService } from 'src/app/Services/OrderServices/order-sercives.service';
+import { DataServiceService } from 'src/app/Services/DataService/data-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart-list-component',
@@ -14,16 +16,19 @@ export class CartListComponentComponent implements OnInit {
   cartList:any;
   countBooks:any;
   addressCard: boolean = false; 
+  orderCard:boolean = false;
   addressList:any;
   quantity = 1;
+  orderList:any;
 
   constructor(private cartListService:CartListServiceService,private addressServices:AddressServicesService,
-        private orderService:OrderSercivesService) { }
+        private orderService:OrderSercivesService,private dataService:DataServiceService,private route:Router) { }
 
   ngOnInit(): void {
     this.token=localStorage.getItem('token');
     this.getAllCart();
     this.getAddressWithType();
+    this.getAllOrders();
     console.log("AddressId for Place Order: ",localStorage.getItem('addressIdForPlaceOrder'))
   }
 
@@ -41,6 +46,11 @@ export class CartListComponentComponent implements OnInit {
       return this.addressCard === true ? (this.addressCard = false) : (this.addressCard = true);
   }
 
+  orderCardSwap() {
+    console.log(this.orderCard);
+    return this.orderCard=== true ? (this.orderCard = false) : (this.orderCard = true);
+}
+
   getAddressWithType(){ 
     this.addressServices.getAllAddress(this.token).subscribe((response:any)=>{
       this.addressList=response.address
@@ -50,7 +60,6 @@ export class CartListComponentComponent implements OnInit {
   decrement(cartItem:any){
     this.quantity = this.quantity - 1;
     this.cartQuantityUpdate(cartItem,this.quantity);
-    localStorage.setItem('cartBookId',cartItem.bookId)
   }
   increment(cartItem:any){
       this.quantity = this.quantity + 1;
@@ -71,7 +80,7 @@ export class CartListComponentComponent implements OnInit {
     localStorage.setItem('addressIdForPlaceOrder',address.addressId)
     console.log("addressId stored to local storage");
   }
-  
+
   placeOrder(cartList:any)
   {
     let data = {
@@ -81,5 +90,20 @@ export class CartListComponentComponent implements OnInit {
     this.orderService.placeOrder(cartList.bookId,data,this.token).subscribe((response:any) =>{
       console.log(response)
     })
+  }
+
+  getAllOrders() { 
+    this.orderService.getAllOrderList(this.token).subscribe((response:any)=>{
+      console.log(response)
+      this.orderList=response.allOrders;
+      this.orderList.reverse();
+    })
+  }
+
+  orderCheckout(orderSummaryData:any)
+  {
+    console.log(orderSummaryData.orderId)
+    this.dataService.sendData(orderSummaryData.orderId)
+    this.route.navigateByUrl('home/successOrder')
   }
 }

@@ -21,6 +21,7 @@ import { QuickViewComponentComponent } from './Components/quick-view-component/q
 import { WishListComponentComponent } from './Components/wish-list-component/wish-list-component.component';
 import { CartListComponentComponent } from './Components/cart-list-component/cart-list-component.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { OrderSuccessComponentComponent } from './Components/order-success-component/order-success-component.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {MatRadioModule} from '@angular/material/radio';
     FooterComponentComponent,
     QuickViewComponentComponent,
     WishListComponentComponent,
-    CartListComponentComponent
+    CartListComponentComponent,
+    OrderSuccessComponentComponent
   ],
   imports: [
     BrowserModule,
