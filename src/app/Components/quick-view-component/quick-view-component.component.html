@@ -1,6 +1,6 @@
 <div class="Whole-container">
     <div><button routerLink='/home/books' class="home">Home/</button><span class="book">
-        Book<span class="bookId">({{bookWithId?.bookId}})</span></span></div>
+            Book<span class="bookId">({{bookWithId?.bookId}})</span></span></div>
     <div class="smallImage">
         <img src="../assets/SmallImage1 (1).png" class="image1">
         <img src="../assets/SmallImage2.png" class="image2">
@@ -8,19 +8,43 @@
     <div class="bookContainer">
         <img src="../assets/BookImage2.png">
         <div fxLayout.xs="column" class="footerButton">
-            <button  class="addToBag" (click)="addCart()">Add To Bag</button>
+            <button class="addToBag" (click)="addCart()">Add To Bag</button>
             <button class="wishList" (click)="addWishlist()">Wish List</button>
         </div>
         <div class="right-container">
             <div class="bookName">{{bookWithId?.bookName}}</div>
             <div class="bookAuthor">by {{bookWithId?.bookAuthor}}</div>
-            <div class="totalRating">{{bookWithId?.totalRating}}<mat-icon class="Star">star</mat-icon></div>
+            <div class="totalRating">{{bookWithId?.totalRating}}<mat-icon class="Star">star</mat-icon>
+            </div>
             <div class="noOfPeopleRated"><span>({{bookWithId?.noOfPeopleRated}})</span></div>
             <div class="discountPricing">Rs.{{bookWithId?.discountPrice}}</div>
             <div class="originalPrice">Rs.{{bookWithId?.originalPrice}}</div>
             <hr style="width:700px;text-align:left;margin-left:0;margin-top: -3px;">
-            <div class="bookSpecs"><li>Book Details<p>{{bookWithId?.bookDetails}}</p></li></div>
+            <div class="bookSpecs">
+                <li>Book Details<p>{{bookWithId?.bookDetails}}</p>
+                </li>
+            </div>
             <hr style="width:700px;text-align:left;margin-left:0;margin-top: -3px;">
+        </div>
+    </div>
+    <div class="feedBackContainer">
+        <div class="customerFeedback">Customer Feedback</div>
+        <div class="enterFeedBackBox">
+            <p>Overall Rating</p>
+            <span class="star-rating">
+                <input type="radio" name="rating" value="1" (change)="starRating($event)"><i></i>
+                <input type="radio" name="rating" value="2" (change)="starRating($event)"><i></i>
+                <input type="radio" name="rating" value="3" (change)="starRating($event)"><i></i>
+                <input type="radio" name="rating" value="4" (change)="starRating($event)"><i></i>
+                <input type="radio" name="rating" value="5" (change)="starRating($event)"><i></i>
+            </span>
+            <div class="writeFeedBack">
+                <form [formGroup]="reviewForm" (ngSubmit)="addFeedBack()">
+                    <input mat-input class="input-text" type="text" id="feedBack" formControlName="feedBack" 
+                          placeholder="Write your feedback">
+                    <button class="submitButton">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
