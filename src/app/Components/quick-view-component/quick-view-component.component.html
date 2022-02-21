@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="Whole-container">
     <div><button routerLink='/home/books' class="home">Home/</button><span class="book">
             Book<span class="bookId">({{bookWithId?.bookId}})</span></span></div>
@@ -32,19 +33,30 @@
         <div class="enterFeedBackBox">
             <p>Overall Rating</p>
             <span class="star-rating">
-                <input type="radio" name="rating" value="1" (change)="starRating($event)"><i></i>
-                <input type="radio" name="rating" value="2" (change)="starRating($event)"><i></i>
-                <input type="radio" name="rating" value="3" (change)="starRating($event)"><i></i>
-                <input type="radio" name="rating" value="4" (change)="starRating($event)"><i></i>
-                <input type="radio" name="rating" value="5" (change)="starRating($event)"><i></i>
+                <form [formGroup]="form">
+                    <div class="addFeedbackCont">
+                        <div class="addFeedbackStars">
+                            <ngx-star-rating formControlName="rating1" [id]="'rating'"></ngx-star-rating>
+                        </div>
+                    </div>
+                </form>
             </span>
             <div class="writeFeedBack">
                 <form [formGroup]="reviewForm" (ngSubmit)="addFeedBack()">
-                    <input mat-input class="input-text" type="text" id="feedBack" formControlName="feedBack" 
-                          placeholder="Write your feedback">
+                    <input mat-input class="input-text" type="text" id="feedBack" formControlName="feedBack"
+                        placeholder="Write your feedback">
                     <button class="submitButton">Submit</button>
                 </form>
             </div>
+        </div>
+        <div class="allFeedbacks" *ngFor="let feedBacks of feeBackList">
+            <div class="fullNameOfFeedBack">{{feedBacks.fullName}}</div>
+            <div class="cont">
+                <div class="stars">
+                    <ngx-star-rating [(ngModel)]="feedBacks.ratings" [id]="'rating3'" [disabled]="true"></ngx-star-rating>
+                </div>
+            </div>
+            <div class="allFeedBacks">{{feedBacks.feedBack}}</div>
         </div>
     </div>
 </div>

@@ -22,6 +22,8 @@ import { WishListComponentComponent } from './Components/wish-list-component/wis
 import { CartListComponentComponent } from './Components/cart-list-component/cart-list-component.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { OrderSuccessComponentComponent } from './Components/order-success-component/order-success-component.component';
+import { NgxStarRatingModule } from 'ngx-star-rating';
+import{ MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,7 @@ import { OrderSuccessComponentComponent } from './Components/order-success-compo
     AppRoutingModule,HttpClientModule,
     BrowserAnimationsModule,
     MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,FlexLayoutModule,MatButtonModule,
-    MatIconModule,MatSelectModule,MatRadioModule
+    MatIconModule,MatSelectModule,MatRadioModule,NgxStarRatingModule,MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,20 +1,44 @@
 <div class="Whole-container">
     <div class="Top-Bar">
         <img src="../assets/education.svg" class="topBarImage" routerLink="/home/books">
-        <span class="bookStore" >Bookstore</span>
+        <span class="bookStore">Bookstore</span>
 
         <mat-icon class="searchIcon">search</mat-icon>
         <input class="searchBox" placeholder="Search">
 
-        <mat-icon class="personIcon">person_outline</mat-icon>
-        <label class="Profile">Profile</label>
+        <mat-icon class="personIcon" mat-icon-button [matMenuTriggerFor]="menu">person_outline</mat-icon>
+        <label class="Profile">{{fullName}}</label>
 
         <mat-icon routerLink='/home/cart' class="cartIcon">shopping_cart_outline</mat-icon>
         <label class="cart">Cart</label>
     </div>
+    <mat-menu #menu="matMenu">
+        <div class="ProfileForMatMenu" style="width: 200px;font-size: 12pt;font-weight: 550;margin-left: 5px;">Hello
+            {{fullName}}</div>
+
+        <div class="divProfile" style="margin-left: 10px;cursor: pointer;">
+            <mat-icon class="profileIcon" style="width: 200px;opacity: 0.6;margin-top: 5px;margin-left: 5px;">
+                person_outline</mat-icon>
+            <div class="profile" style="transform: translateY(-26px);margin-left: 30px;">Profile</div>
+        </div>
+
+        <div class="divOrders" style="margin-left: 10px;margin-top: -3px;cursor: pointer;">
+            <mat-icon class="tabIcon" style="width: 200px;opacity: 0.6;margin-top: -45px;margin-left: 5px;">tab
+            </mat-icon>
+            <div class="orders" style="transform: translateY(-26px);margin-left: 32px;">My Orders</div>
+        </div>
+
+        <div class="divWishList" style="margin-left: 10px;cursor: pointer;" routerLink="/home/wishList">
+            <mat-icon class="favouriteIcon" style="width: 200px;opacity: 0.6;margin-top: -32px;margin-left: 5px;">
+                favorite_border</mat-icon>
+            <div class="wishList" style="transform: translateY(-27px);margin-left: 32px;">Wish List</div>
+        </div>
+        <button class="logoutButton" style="width: 123px;height: 33px;border-color: #A03037;color: #A03037;margin-top: -4px;
+               background-color: #FFFFFF;border-radius: 2px;opacity: 1;cursor: pointer;margin-left: 45px;">Logout</button>
+    </mat-menu>
 </div>
 <div>
     <router-outlet>
-        
+
     </router-outlet>
 </div>

@@ -16,10 +16,17 @@ export class QuickViewComponentComponent implements OnInit {
   bookId:any; 
   bookWithId:any;
   reviewForm!:FormGroup;
+  rating3!: number;
+  public form!: FormGroup;
+  ratingsOfPerson!:number;
+  feeBackList:any;
 
   constructor(private bookService:BookServiceService,private wishListService:AddWishListService,private route:Router,
        private cartListService:CartListServiceService,private formBuilder: FormBuilder,
-           private feedbackService:FeedbackServiceService) { }
+           private feedbackService:FeedbackServiceService) {
+            this.form = this.formBuilder.group({
+              rating1: ['', Validators.required],
+            });}
 
   ngOnInit(): void {
     this.token=localStorage.getItem('token');
@@ -28,6 +35,7 @@ export class QuickViewComponentComponent implements OnInit {
     this.reviewForm = this.formBuilder.group({
       feedBack: ['', [Validators.required, Validators.email]]
     });
+    this.getAllFeedback();
   }
   getBookWithId() {
     this.bookService.getAllBooks(this.token).subscribe((response: any) => {
@@ -68,10 +76,18 @@ export class QuickViewComponentComponent implements OnInit {
   addFeedBack(){
     let requestData={
       feedBack:this.reviewForm.value.feedBack,
-      ratings:localStorage.getItem('currentBookRating')
+      ratings:this.form.value.rating1
     }
     this.feedbackService.addFeedBack(localStorage.getItem('bookId'),requestData,this.token).subscribe((response:any)=>{
       console.log(response)
+    })
+  }
+
+  getAllFeedback() {
+    this.feedbackService.getAllFeedBack(localStorage.getItem('bookId'),this.token).subscribe((response:any) => {
+        console.log(response)
+        this.feeBackList=response.feedBacks
+        this.feeBackList.reverse()
     })
   }
 }

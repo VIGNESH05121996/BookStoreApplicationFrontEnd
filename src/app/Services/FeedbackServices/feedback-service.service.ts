@@ -20,4 +20,15 @@ export class FeedbackServiceService {
     }
     return this.httpService.postRequest('/FeedBack/'+bookId,data,true,header);
   }
+
+  getAllFeedBack(bookId:any,token:any)
+  {
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json-patch+json',
+        Authorization: 'Bearer '+ token
+      })
+    }
+    return this.httpService.getRequest('/FeedBack/'+bookId,true,header);
+  }
 }

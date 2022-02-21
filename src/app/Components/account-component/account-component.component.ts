@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserServicesService } from 'src/app/Services/UserServices/user-services.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-account-component',
   templateUrl: './account-component.component.html',
@@ -64,7 +65,8 @@ export class AccountComponentComponent implements OnInit {
         console.log(response)
         if(response.success == true)
         {
-          localStorage.setItem('token',response.jwtToken)
+          localStorage.setItem('token',response.credentials.jwtToken);
+          localStorage.setItem('fullName',response.credentials.fullName)
           this.route.navigateByUrl('home');
         }
       })
