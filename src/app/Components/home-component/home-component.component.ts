@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-component',
@@ -8,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponentComponent implements OnInit {
 
   fullName:any
-  constructor() { }
+  constructor(private route:Router) { }
 
   ngOnInit(): void {
     this.fullName=localStorage.getItem('fullName')
   }
-
+  
+  onClickLogout()
+  {
+    localStorage.removeItem('token');
+    localStorage.removeItem('currentBookRating');
+    localStorage.removeItem('fullName');
+    localStorage.removeItem('addressIdForPlaceOrder');
+    localStorage.removeItem('cartBookId');
+    localStorage.removeItem('bookId');
+    localStorage.removeItem('currentBookCartQuantity');
+    this.route.navigateByUrl('account');
+  }
 }

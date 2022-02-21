@@ -24,6 +24,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import { OrderSuccessComponentComponent } from './Components/order-success-component/order-success-component.component';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import{ MatMenuModule } from '@angular/material/menu';
+import { AuthenticationGuard } from './Components/authentication.guard';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import{ MatMenuModule } from '@angular/material/menu';
     MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,FlexLayoutModule,MatButtonModule,
     MatIconModule,MatSelectModule,MatRadioModule,NgxStarRatingModule,MatMenuModule
   ],
-  providers: [],
+  providers: [ AuthenticationGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

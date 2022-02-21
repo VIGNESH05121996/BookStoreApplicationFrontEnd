@@ -22,7 +22,7 @@
     </div>
     <div class="address-container-closed" *ngIf="!addressCard" (click)="addressCardSwap()">
         <div class="address-card-closed">
-            <p class="card-closed-text">Address Details</p>
+            <p class="card-closed-text">Address Details(Select address type and click continue before placing order)</p>
         </div>
     </div>
     <div class="address-container-opened" *ngIf="addressCard">
@@ -44,7 +44,7 @@
             <div class="state"><label class="stateLable">State</label>
                 <div class="interState"><p>{{address.state}}</p></div>
             </div>
-            <button class="ContinueButton" (click)="storeAddressIdToLocalStorage(address)">Continue</button>
+            <button class="ContinueButton" (click)="storeAddressIdToLocalStorage(address)" (click)="addressCardSwap()">Continue</button>
         </div>
         <div class="addressType">
             <label>Select Button For Saved Address</label>
