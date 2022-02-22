@@ -94,12 +94,14 @@
                 transform: translateY(-20px);
             }
     
-            button { 
+            .orderPlacedAt { 
                 transform: translateY(-68px);
-                margin-left: 950px;
+                margin-left: 800px;
                 mat-icon { 
                     opacity: 0.7;
                 }
+                font-size: 12pt;
+                font-weight: 550;
             }
         }
     }

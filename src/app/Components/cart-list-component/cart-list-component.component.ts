@@ -72,6 +72,7 @@ export class CartListComponentComponent implements OnInit {
     }
     this.cartListService.updateCart(bookData.cartId,requestData,this.token).subscribe((response:any)=>{
       console.log(response)
+      localStorage.setItem('updatedCurrentCartQuantity',response.cart.quantity)
     })
   }
 
@@ -85,7 +86,7 @@ export class CartListComponentComponent implements OnInit {
   {
     let data = {
       addressId : localStorage.getItem('addressIdForPlaceOrder'),
-      quantity : cartList.quantity,
+      quantity : localStorage.getItem('updatedCurrentCartQuantity'),
     }
     this.orderService.placeOrder(cartList.bookId,data,this.token).subscribe((response:any) =>{
       console.log(response)

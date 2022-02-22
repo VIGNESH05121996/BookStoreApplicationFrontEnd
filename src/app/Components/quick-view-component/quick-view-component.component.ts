@@ -80,6 +80,7 @@ export class QuickViewComponentComponent implements OnInit {
     }
     this.feedbackService.addFeedBack(localStorage.getItem('bookId'),requestData,this.token).subscribe((response:any)=>{
       console.log(response)
+      window.location.reload()
     })
   }
 

@@ -12,7 +12,7 @@
             <div class="bookAuthor">by {{bookList.bookAuthor}}</div>
             <div class="discountPricing">Rs.{{bookList.discountPrice}}</div>
             <div class="originalPrice">Rs.{{bookList.originalPrice}}</div>
-            <button class="PlaceOrderButton" (click)="placeOrder(bookList)">Place Order</button>
+            <button class="PlaceOrderButton" (click)="placeOrder(bookList)" (click)="orderCardSwap()">Place Order</button>
             <div class="incrementDecrementButtons">
                 <button class="decrementButton" (click)="decrement(bookList)">-</button>
                 <p class="quantity"><span >{{quantity}}</span></p>

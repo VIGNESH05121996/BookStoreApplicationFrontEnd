@@ -24,6 +24,7 @@ export class HomeComponentComponent implements OnInit {
     localStorage.removeItem('cartBookId');
     localStorage.removeItem('bookId');
     localStorage.removeItem('currentBookCartQuantity');
+    localStorage.removeItem('updatedCurrentCartQuantity');
     this.route.navigateByUrl('account');
   }
 }
