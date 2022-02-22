@@ -1,0 +1,17 @@
+<div class="whole-container">
+    <div class="switchButton"><button routerLink='/home/books' class="home">Home/</button>
+        <span class="myOrderList">My Orders</span>
+    </div>
+    <div class="myOrderList1">
+        <div class="orderListText">
+            <p class="Mylist">My Orders</p>
+        </div>
+        <div class="orderList-container" *ngFor="let bookList of orderList">
+            <img src="../assets/BookImage2.png">
+            <div class="bookName">{{bookList.bookName}}</div>
+            <div class="bookAuthor">by {{bookList.bookAuthor}}</div>
+            <div class="discountPricing">Rs.{{bookList.discountPrice}}</div>
+            <div class="originalPrice">Rs.{{bookList.originalPrice}}</div>
+        </div>
+    </div>
+</div>

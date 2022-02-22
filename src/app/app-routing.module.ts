@@ -10,6 +10,7 @@ import { WishListComponentComponent } from './Components/wish-list-component/wis
 import { CartListComponentComponent } from './Components/cart-list-component/cart-list-component.component';
 import { OrderSuccessComponentComponent } from './Components/order-success-component/order-success-component.component';
 import { AuthenticationGuard } from './Components/authentication.guard';
+import { MyOrderListComponent } from './Components/my-order-list/my-order-list.component';
 
 const routes: Routes = [
   {path: '',   redirectTo: '/account', pathMatch: 'full'},
@@ -25,6 +26,7 @@ const routes: Routes = [
       {path:'wishList', component:WishListComponentComponent},
       {path:'cart', component:CartListComponentComponent},
       {path:'successOrder', component:OrderSuccessComponentComponent},
+      {path:'myOrders', component:MyOrderListComponent},
   ]}
 ];
 

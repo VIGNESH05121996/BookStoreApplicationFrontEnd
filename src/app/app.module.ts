@@ -25,6 +25,7 @@ import { OrderSuccessComponentComponent } from './Components/order-success-compo
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import{ MatMenuModule } from '@angular/material/menu';
 import { AuthenticationGuard } from './Components/authentication.guard';
+import { MyOrderListComponent } from './Components/my-order-list/my-order-list.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AuthenticationGuard } from './Components/authentication.guard';
     QuickViewComponentComponent,
     WishListComponentComponent,
     CartListComponentComponent,
-    OrderSuccessComponentComponent
+    OrderSuccessComponentComponent,
+    MyOrderListComponent 
   ],
   imports: [
     BrowserModule,
