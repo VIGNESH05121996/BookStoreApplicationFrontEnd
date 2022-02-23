@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient  } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,6 +26,8 @@ import { NgxStarRatingModule } from 'ngx-star-rating';
 import{ MatMenuModule } from '@angular/material/menu';
 import { AuthenticationGuard } from './Components/authentication.guard';
 import { MyOrderListComponent } from './Components/my-order-list/my-order-list.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { MyOrderListComponent } from './Components/my-order-list/my-order-list.c
     MatFormFieldModule,MatInputModule,FormsModule,ReactiveFormsModule,FlexLayoutModule,MatButtonModule,
     MatIconModule,MatSelectModule,MatRadioModule,NgxStarRatingModule,MatMenuModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [ AuthenticationGuard ],
   bootstrap: [AppComponent]
 })

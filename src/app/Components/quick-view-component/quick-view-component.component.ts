@@ -3,20 +3,19 @@ import { BookServiceService } from 'src/app/Services/BookServices/book-service.s
 import { AddWishListService } from 'src/app/Services/WishListServices/add-wish-list.service';
 import { CartListServiceService } from 'src/app/Services/CartListServices/cart-list-service.service';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { FeedbackServiceService } from 'src/app/Services/FeedbackServices/feedback-service.service';
 
 @Component({
   selector: 'app-quick-view-component',
   templateUrl: './quick-view-component.component.html',
-  styleUrls: ['./quick-view-component.component.scss']
+  styleUrls: ['./quick-view-component.component.scss'],
 })
 export class QuickViewComponentComponent implements OnInit {
   token:any;
   bookId:any; 
   bookWithId:any;
   reviewForm!:FormGroup;
-  rating3!: number;
   public form!: FormGroup;
   ratingsOfPerson!:number;
   feeBackList:any;
